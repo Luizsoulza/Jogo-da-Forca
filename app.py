@@ -1,8 +1,14 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
+from flask_cors import CORS
 from src.jogo_forca import JogoForca
 
 app = Flask(__name__)
+CORS(app)
 jogo = None
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 @app.route('/categorias', methods=['GET'])
 def categorias():

@@ -41,16 +41,3 @@ class BancoPalavras:
         palavras_categoria = self.obter_palavras_categoria(categoria)   # Primeiro pega todas as palavras da categoria escolhida
     
         return random.choice(palavras_categoria)      # random.choice escolhe um elemento aleatório de uma lista
-        
-    
-"""banco = BancoPalavras()
-
-print("Categorias disponíveis:")
-for categoria in banco.listar_categorias():
-    print(categoria)
-
-categoria = input("Escolha uma categoria: ")
-
-palavra = banco.sortear_palavra(categoria)
-
-print("Palavra sorteada:", palavra)"""

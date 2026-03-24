@@ -3,10 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link 
     <title>Jogo da Forca</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-    
+
+    <!-- TELA 1: Seleção de categoria -->
+    <div id="tela-categorias">
+        <h1>Jogo da Forca</h1>
+        <p>Escolha uma categoria:</p>
+        <div id="lista-categorias"></div>
+    </div>
+
+    <!-- TELA 2: Jogo -->
+    <div id="tela-jogo" style="display: none;">
+        <p id="categoria-label"></p>
+        <img id="forca-img" src="" alt="Forca">
+        <div id="palavra-mascarada"></div>
+        <p id="erros-label"></p>
+        <div id="input-area">
+            <input type="text" id="input-letra" maxlength="1" placeholder="Digite uma letra">
+            <button id="btn-tentar">Tentar</button>
+        </div>
+        <div id="letras-tentadas"></div>
+        <button id="btn-reiniciar" style="display: none;">Jogar Novamente</button>
+    </div>
+
+    <script src="/static/js/game.js"></script>
 </body>
 </html>
