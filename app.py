@@ -12,7 +12,6 @@ def index():
 
 @app.route('/categorias', methods=['GET'])
 def categorias():
-    # CORRIGIDO: instanciação simples, sem import manual desnecessário
     temp = JogoForca.__new__(JogoForca)
     temp.banco_palavras = __import__('src.banco_palavras', fromlist=['BancoPalavras']).BancoPalavras()
     return jsonify(temp.banco_palavras.listar_categorias())
